@@ -46,10 +46,9 @@ A **Google Flights clone** built with **React (MUI, TypeScript), Redux, Axios, a
  ┃ ┃ ┣ 📂 selectors
  ┃ ┃ ┃ ┣ 📜 airportsSelector.ts  # Selects airport data from state
  ┃ ┃ ┃ ┣ 📜 flightsSelector.ts   # Selects flight data from state
- ┃ ┃ ┣ 📜 store.ts                 # Redux store configuration
+ ┃ ┃ ┣ 📜 store.ts               # Redux store configuration
  ┃ ┣ 📂 services
- ┃ ┃ ┣ 📜 airportService.ts      # Fetches airport data from API
- ┃ ┃ ┣ 📜 flightService.ts       # Fetches flights from API
+ ┃ ┃ ┣ 📜 baseService.ts         # Base api service client
  ┃ ┣ 📂 shared
  ┃ ┃ ┣ 📜 types.ts               # Holds all shared type definitions
  ┃ ┣ 📜 App.tsx                  # Main application component
