@@ -88,6 +88,7 @@ Create a .env file in the root directory and add the following:
 ```sh
 REACT_APP_RAPIDAPI_KEY=your-rapidapi-key
 REACT_APP_MAPBOX_ACCESS_TOKEN=your-mapbox-token
+VITE_RAPID_API_HOST=your-rapidapi-host
 ```
 
 ## ▶️ 4️⃣ Start the Development Server
