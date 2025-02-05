@@ -73,8 +73,8 @@ Before you start, ensure you have the following installed:
 
 ## 📥 1️⃣ Clone the Repository  
 ```sh
-git clone https://github.com/your-username/flights-app.git
-cd flights-app
+git clone [https://github.com/ehtishamhdev/spotter-flights-assesment.git](https://github.com/ehtishamhdev/spotter-flights-assesment.git)
+cd spotter-flights-assesment
 ```
 
 ## 📦 2️⃣ Install Dependencies
