@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import { fetchFlights } from "../../services/flightService";
-import { FlightData, FlightSearchData } from "../../shared/types";
+import { FetchFlightProps, FlightData, FlightSearchData } from "../../shared/types";
+import baseService from "../../services/baseService";
 
 interface FlightState {
   flights: FlightData[] | null;
@@ -46,5 +46,13 @@ const flightsSlice = createSlice({
       });
   },
 });
+
+export const fetchFlights = createAsyncThunk(
+  "flights/fetchFlights",
+  async ({ originSkyId, originEntityId, destinationSkyId, destinationEntityId, date, returnDate }: FetchFlightProps) => {
+    const response = await baseService.get('/searchFlights', { params: { originEntityId, originSkyId, destinationEntityId, destinationSkyId, date, returnDate } });
+    return response.data;
+  }
+);  
 
 export default flightsSlice.reducer;

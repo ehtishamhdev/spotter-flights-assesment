@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import { fetchNearByAirports } from "../../services/airportService";
 import { AirportData } from "../../shared/types";
+import baseService from "../../services/baseService";
 
 interface AirportState {
   airports: AirportData[],
@@ -45,5 +45,12 @@ const airportSlice = createSlice({
   },
 });
 
+export const fetchNearByAirports = createAsyncThunk(
+  "flights/fetchAirports",
+  async ({ lat, lng }: { lat: string; lng: string }) => {
+    const response = await baseService.get('/getNearByAirports', { params: { lat, lng } });
+    return response.data;
+  }
+);    
 
 export default airportSlice.reducer;

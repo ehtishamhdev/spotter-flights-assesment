@@ -51,3 +51,12 @@ export interface FlightSearchData {
     price: { formatted: string };
     legs: FlightSearchLeg[];
 }
+
+export interface FetchFlightProps {
+  originSkyId: string;
+  destinationSkyId: string;
+  originEntityId: string;
+  destinationEntityId: string;
+  date: string;
+  returnDate: string;
+}

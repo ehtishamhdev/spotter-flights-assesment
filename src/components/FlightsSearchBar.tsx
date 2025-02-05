@@ -18,11 +18,11 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useDispatch, useSelector } from "react-redux";
 
 import { AppDispatch } from "../redux/store";
-import { fetchNearByAirports } from "../services/airportService";
 import { selectAirports } from "../redux/selectors/airportsSelector";
 import { AirportData } from "../shared/types";
-import { fetchFlights } from "../services/flightService";
 import { validationSchema } from "../schemas/flightSchema";
+import { fetchFlights } from "../redux/slices/flightsSlice";
+import { fetchNearByAirports } from "../redux/slices/airportSlice";
 
 const FLIGHT_INITIAL_STATE = { entityId: "", skyId: "", airportName: "" };
 const FROM_INITIAL_VALUE = {
